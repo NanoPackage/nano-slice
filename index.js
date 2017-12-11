@@ -45,7 +45,7 @@ const parseNumber = n => isNaN(parseInt(n)) ? NaN : Number(n);
  */
 export default v => {
   // 校验输入必须为字符串或者数组
-  invariant(typeof v === 'string' || Array.isArray(v),'Only string and array can be sliced!');
+  invariant(typeof v === 'string' || Array.isArray(v), 'Only string and array can be sliced!');
 
   return new Proxy({}, {
     get: (_, path) => {
